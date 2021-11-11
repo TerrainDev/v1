@@ -36,6 +36,48 @@ export default function Example() {
         commentCount: 3,
         shareCount: 2,
       },
+      {
+        id: 2,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 3,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 4,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 2,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 3,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 4,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
     ],
     Resources: [
       {
