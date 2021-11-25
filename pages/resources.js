@@ -56,12 +56,12 @@ export default function ResourcesPage({ resources }) {
   return (
     <div className="bg-blue-200 lg:bg-blue-100">
       <div className="min-w-screen flex flex-col min-h-screen overflow-y-hidden">
-        <div className="lg:grid lg:gap-4 lg:grid-cols-12  pt-16 pb-4 min-h-screen ">
+        <div className=" pt-16  min-h-screen ">
           <aside
-            className="hidden lg:inline-block lg:col-span-3  pt-5 pb-2 px-2 space-y-1  bg-blue-200 max-h-screen"
+            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-blue-200  "
             aria-label="Sidebar"
           >
-            <h1 className="lg:mb-10 px-2 text-blue-600 text-xl ">Resources</h1>
+            <h1 className="px-4 lg:mb-10 text-blue-600 text-xl ">Resources</h1>
 
             {navigation.map((item, i) => (
               <div
@@ -70,7 +70,7 @@ export default function ResourcesPage({ resources }) {
                   selectedTag.id === item.id
                     ? "bg-blue-300 hover:bg-blue-300"
                     : "bg-blue-200 hover:bg-[#A9D2FF] ",
-                  "text-blue-600 hover:text-blue-900  group lg:flex items-center px-2 py-2 text-sm font-medium rounded-lg cursor-pointer"
+                  "text-blue-600 hover:text-blue-900  group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
                 )}
                 onClick={() => {
                   setSelectedTag(navigation[i]), filterByTag(item.id);
@@ -109,8 +109,7 @@ export default function ResourcesPage({ resources }) {
               tagCount={tagCount}
             />
           </div>
-
-          <div className="col-span-9 p-4  lg:py-10 space-y-4  overflow-y-auto">
+          <div className=" flex flex-col px-4 lg:pl-80 lg:pr-8 lg:px-10 pb-24 pt-10 space-y-4 overflow-y-auto ">
             {showResources.map((res) => (
               <ResourceList key={res.sys.id} res={res} />
             ))}
