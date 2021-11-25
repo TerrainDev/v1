@@ -10,11 +10,16 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  console.log(router.asPath);
   return (
     <ShopProvider>
       <Nav />
       <Component {...pageProps} key={router.asPath} />
-      <BottomNav />
+      {router.asPath.includes("/resources") ||
+      router.asPath.includes("/consultancy") ||
+      router.asPath.endsWith("/") ? (
+        <BottomNav />
+      ) : null}
     </ShopProvider>
   );
 }

@@ -16,7 +16,7 @@ export default function Store({ products }) {
             const { handle, title, id } = book.node;
             const { altText, originalSrc } = book.node.images.edges[0].node;
             return (
-              <Link key={id} href={`/shop/${handle}`}>
+              <Link key={id} href={`/bookshelf/${handle}`}>
                 <a className="group">
                   <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-1 sm:aspect-h-1">
                     <Image

@@ -4,7 +4,6 @@ import ProjectCard from "../components/ProjectCard";
 import Masonry from "react-masonry-css";
 
 export default function Home({ projects }) {
-  console.log(projects);
   const [showProjects, setShowProjects] = useState(projects);
 
   const breakpoints = {
