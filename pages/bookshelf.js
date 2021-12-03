@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Store({ products }) {
   return (
     <div className="bg-blue-200 min-h-screen">
-      <div className="max-w-2xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div className="max-w-full mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:max-w-7xl ">
         <h2 id="products-heading" className="sr-only">
           Products
         </h2>
@@ -20,8 +20,6 @@ export default function Store({ products }) {
                 <a className="group">
                   <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-1 sm:aspect-h-1">
                     <Image
-                      // width={500}
-                      // height={500}
                       layout="fill"
                       objectFit="cover"
                       src={originalSrc}
@@ -35,9 +33,16 @@ export default function Store({ products }) {
                       {formatPrice(book.node.priceRange.minVariantPrice.amount)}
                     </p>
                   </div>
-                  <p className="mt-1 text-sm text-blue-900">
-                    {book.node.tags[0]}
-                  </p>
+                  {book.node.tags.map((t) => {
+                    return (
+                      <p
+                        key={t}
+                        className="inline-block mr-1 mt-1 text-xs font-medium text-blue-900"
+                      >
+                        #{t}
+                      </p>
+                    );
+                  })}
                 </a>
               </Link>
             );

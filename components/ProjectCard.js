@@ -42,9 +42,17 @@ export default function ProjectCard({ project }) {
         </Link>
       </div>
       <div className="flex flex-col flex-1 p-4 space-y-2 ">
-        <p className="text-xs  text-blue-700 font-bold">
-          {format(new Date(date), "do MMM yyyy")}
-        </p>
+        <div className="flex">
+          <p className="text-xs  text-blue-700 font-bold mr-2">
+            {format(new Date(date), "do MMM yyyy")}
+          </p>
+          {Date.parse(date) > new Date() && (
+            <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500   font-bold text-xs underline ">
+              UPCOMING
+            </h4>
+          )}
+        </div>
+
         <h3 className="text-sm font-medium text-blue-800">{title}</h3>
         <div className="text-sm text-blue-600 ">
           {documentToReactComponents(shortDescription.json, renderOptions)}

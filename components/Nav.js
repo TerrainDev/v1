@@ -28,10 +28,10 @@ export default function Nav() {
       <div className="hidden lg:flex lg:items-center">
         {router.asPath.match("/bookshelf") ? (
           <button
-            className="text-right text-blue-600 cursor-pointer mr-4 text-xl font-medium hover:text-blue-700"
+            className=" inline-block text-right text-blue-600 cursor-pointer mr-4 text-xl font-medium hover:text-blue-700"
             onClick={() => setCartOpen(!cartOpen)}
           >
-            CART
+            CART ({cartQuantity})
           </button>
         ) : (
           <Link href="../bookshelf">
@@ -57,14 +57,22 @@ export default function Nav() {
         </Link>
       </div>
       <Menu as="div" className="relative inline-block text-left lg:hidden">
-        <div className="flex items-center">
+        <div className="flex items-center ">
           {router.asPath.match("/bookshelf") ? (
-            <button
-              className="text-right text-blue-600 cursor-pointer mr-4 text-xl font-medium hover:text-blue-700"
-              onClick={() => setCartOpen(!cartOpen)}
-            >
-              CART
-            </button>
+            <div className="flex items-center text-right text-blue-600 cursor-pointer mr-4 text-xl hover:text-blue-700">
+              <button
+                className="font-medium"
+                onClick={() => setCartOpen(!cartOpen)}
+              >
+                CART
+              </button>
+              <button
+                className="font-medium"
+                onClick={() => setCartOpen(!cartOpen)}
+              >
+                ({cartQuantity})
+              </button>
+            </div>
           ) : (
             <Link href="../bookshelf">
               <h4 className="text-right text-blue-600 cursor-pointer mr-4 text-xl font-medium hover:text-blue-700">
@@ -86,7 +94,7 @@ export default function Nav() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-32 mt-2 origin-top-right bg-blue-100  rounded-lg shadow-md ring-1 ring-blue-600 ring-opacity-70 focus:outline-none">
+          <Menu.Items className="absolute right-0 z-50 w-32 mt-2 origin-top-right bg-blue-100  rounded-lg shadow-md ring-1 ring-blue-600 ring-opacity-70 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
