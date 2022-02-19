@@ -1,8 +1,74 @@
-body,
-html {
-  background-color: #bfdbfe;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-borderCol-main: 37, 99, 235;
+    --color-text-titles: 37, 99, 235;
+    --color-text-titles-darker: 30, 64, 175;
+    --color-text-inverted: 241, 245, 249;
+    --color-text-alt: 79, 70, 229;
+    --color-white: 241, 245, 249;
+    --color-lighter-fill: 219, 234, 254;
+    --color-fill: 191, 219, 254;
+    --color-fill-alt: 246, 246, 246;
+    --color-button-main: 37, 99, 235;
+    --color-button-main-hover: 30, 64, 175;
+    --color-button-light: 191, 219, 254;
+    --color-button-light-hover: 147, 197, 253;
+  }
+  .theme-terrain {
+    --color-borderCol-main: 5, 229, 0;
+    --color-text-titles: 19, 1, 250;
+    --color-text-titles-darker: 23, 1, 246;
+    --color-text-inverted: 250, 250, 250;
+    --color-text-alt: 79, 70, 229;
+    --color-lighter-fill: 255, 255, 255;
+    --color-fill: 246, 246, 246;
+    --color-fill-alt: 250, 250, 250;
+    --color-button-main: 0, 0, 255;
+    --color-button-main-hover: 14, 1, 203;
+    --color-button-light: 250, 250, 250;
+    --color-button-light-hover: 235, 234, 232;
+  }
+  .theme-terrin {
+    --color-borderCol-main: 194, 209, 255;
+    --color-text-titles: 5, 229, 0;
+    --color-text-titles-darker: 5, 181, 0;
+    --color-text-inverted: 216, 206, 192;
+    --color-text-alt: 79, 70, 229;
+    --color-white: 29, 30, 44;
+    --color-lighter-fill: 36, 37, 51;
+    --color-fill: 29, 30, 44;
+    --color-fill-alt: 29, 28, 42;
+    --color-button-main: 23, 88, 51;
+    --color-button-main-hover: 29, 30, 44;
+    --color-button-light: 28, 25, 13;
+    --color-button-light-hover: 36, 37, 51;
+  }
 }
 
+:root {
+  --color-bordercol-soft: 59, 130, 246;
+  --color-bordercol-main: 37, 99, 235;
+}
+body,
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(79, 78, 78, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 54, 54, 0.219);
+  border-radius: 10px;
+}
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Store({ products }) {
   return (
-    <div className="bg-blue-200 min-h-screen">
+    <div className="theme-base dark:theme-terrain bg-skin-fill min-h-screen">
       <div className="max-w-full mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:max-w-7xl ">
         <h2 id="products-heading" className="sr-only">
           Products
@@ -27,7 +27,7 @@ export default function Store({ products }) {
                       className="object-center object-cover group-hover:opacity-75"
                     />
                   </div>
-                  <div className="mt-4 flex items-center justify-between text-base font-medium text-blue-600">
+                  <div className="mt-4 flex items-center justify-between text-base font-medium text-skin-titles">
                     <h3>{title}</h3>
                     <p>
                       {formatPrice(book.node.priceRange.minVariantPrice.amount)}
@@ -37,7 +37,7 @@ export default function Store({ products }) {
                     return (
                       <p
                         key={t}
-                        className="inline-block mr-1 mt-1 text-xs font-medium text-blue-900"
+                        className="inline-block mr-1 mt-1 text-xs font-medium text-skin-titles-darker"
                       >
                         #{t}
                       </p>

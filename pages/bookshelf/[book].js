@@ -50,7 +50,7 @@ export default function ProductPage({ product }) {
   SwiperCore.use([Navigation, Pagination]);
 
   return (
-    <div className="bg-blue-200 ">
+    <div className="theme-base dark:theme-terrain bg-skin-fill ">
       <main className=" pt-32 pb-24 px-4 sm:pt-24 sm:pb-32 sm:px-6 lg:px-8 ">
         {/* Product */}
         <div className="flex flex-col justify-center items-between space-y-8 md:items-start md:space-y-4 md:space-x-4 lg:flex-row lg:space-x-8  lg:w-full  ">
@@ -74,13 +74,13 @@ export default function ProductPage({ product }) {
           {/* Product details */}
           <div className="flex flex-col lg:pl-24 justify-center w-full md:w-[50%}  ">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-blue-800 sm:text-3xl">
+              <h1 className="text-2xl font-bold tracking-tight text-skin-titles-darker sm:text-3xl">
                 {product.title}
               </h1>
               <h2 id="information-heading" className="sr-only">
                 Product information
               </h2>
-              <h3 className="mt-2 text-2xl font-bold tracking-tight text-blue-800">
+              <h3 className="mt-2 text-2xl font-bold tracking-tight text-skin-titles-darker">
                 {formatPrice(product.priceRange.minVariantPrice.amount)}
               </h3>
             </div>
@@ -90,16 +90,16 @@ export default function ProductPage({ product }) {
                   variantQuantity != 1 &&
                   setVariantQuantity(variantQuantity - 1)
                 }
-                className="hover:bg-blue-100 p-1 h-8 w-8 rounded-full text-blue-800 font-medium flex justify-center items-center"
+                className="hover:bg-skin-soft-hover p-1 h-8 w-8 rounded-full text-skin-titles-darker font-medium flex justify-center items-center"
               >
                 <MinusIcon />
               </button>
-              <span className="text-blue-800 text-2xl font-medium">
+              <span className="text-skin-titles-darker text-2xl font-medium">
                 {variantQuantity}
               </span>
               <button
                 onClick={() => setVariantQuantity(variantQuantity + 1)}
-                className="hover:bg-blue-100 p-1 h-8 w-8 rounded-full text-blue-800 font-medium flex justify-center items-center"
+                className="hover:bg-skin-button-light-hover p-1 h-8 w-8 rounded-full text-skin-titles-darker font-medium flex justify-center items-center"
               >
                 <PlusIcon />
               </button>
@@ -109,14 +109,14 @@ export default function ProductPage({ product }) {
             <div>
               <label
                 htmlFor="res"
-                className="block text-lg font-medium text-blue-800 my-4"
+                className="block text-lg font-medium text-skin-titles-darker my-4"
               >
                 Plant one tree when you order this book?
               </label>
               <select
                 id="res"
                 name="res"
-                className="mt-1 block w-80 pl-3 pr-10 py-2 text-blue-800 bg-blue-200 text-base border-blue-600 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-lg"
+                className="mt-1 block w-80 pl-3 pr-10 py-2 text-skin-titles-darker bg-skin-fill text-base border-borderCol-main focus:outline-none focus:ring-borderCol-soft focus:border-borderCol-soft sm:text-sm rounded-lg"
               >
                 <option className="">Yes! (included)</option>
                 <option>No thanks (we'll plant it anyway)</option>
@@ -130,7 +130,7 @@ export default function ProductPage({ product }) {
                   addToCart(selectedVariant);
                 }}
                 type="button"
-                className="w-72 bg-blue-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-200 focus:ring-blue-500"
+                className="w-72 bg-skin-button-main border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-skin-inverted hover:bg-skin-button-main-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-200 focus:ring-blue-500"
               >
                 Add to Cart{" "}
                 {formatPrice(
@@ -145,7 +145,7 @@ export default function ProductPage({ product }) {
                   addToCart(selectedVariant);
                 }}
                 type="button"
-                className="bottom-8 shadow-lg z-50 w-80 fixed   bg-blue-600 border border-transparent rounded-md py-3 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-200 focus:ring-blue-500"
+                className="bottom-8 shadow-lg z-50 w-80 fixed bg-skin-button-main border border-transparent rounded-md py-3 text-base font-medium text-skin-inverted hover:bg-skin-button-main-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-200 focus:ring-blue-500"
               >
                 Add to Cart{" "}
                 {formatPrice(
@@ -156,11 +156,11 @@ export default function ProductPage({ product }) {
           </div>
         </div>
         <div className="mx-auto max-w-none flex flex-col ">
-          <h5 className=" font-medium my-6 text-blue-800 text-2xl">
+          <h5 className=" font-medium my-6 text-skin-titles-darker text-2xl">
             Description
           </h5>
           <div
-            className="text-blue-800 max-w-4xl"
+            className="text-skin-titles-darker max-w-4xl"
             dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
           ></div>
         </div>
@@ -168,12 +168,14 @@ export default function ProductPage({ product }) {
         {/* Related products */}
         <div className="max-w-none mx-auto z-20 mt-24 sm:mt-32 lg:max-w-none">
           <div className="flex items-center justify-between space-x-4">
-            <h2 className="text-lg font-medium text-blue-800">Related books</h2>
+            <h2 className="text-lg font-medium text-skin-titles-darker">
+              Related books
+            </h2>
             <Link
               href="/bookshelf"
-              className="whitespace-nowrap text-sm font-medium text-blue-600 hover:text-blue-800"
+              className="whitespace-nowrap text-sm font-medium text-skin-titles hover:text-skin-titles-hover"
             >
-              <a className="text-blue-800 hover:text-blue-900">
+              <a className="text-skin-titles hover:text-skin-titles-hover">
                 View all<span aria-hidden="true"> &rarr;</span>
               </a>
             </Link>
@@ -194,7 +196,7 @@ export default function ProductPage({ product }) {
                       </div>
                     </a>
                   </Link>
-                  <div className="mt-4 flex items-center justify-between text-base font-medium text-blue-600 space-x-8">
+                  <div className="mt-4 flex items-center justify-between text-base font-medium text-skin-titles space-x-8">
                     <h3>
                       <a href="#">
                         <span aria-hidden="true" className="absolute inset-0" />
