@@ -11,8 +11,6 @@ import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const { pathname } = useRouter;
-  console.log(pathname);
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       <ShopProvider>
