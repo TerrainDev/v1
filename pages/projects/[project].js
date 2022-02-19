@@ -6,7 +6,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
 
 export default function ProjectPage({ project }) {
-  console.log(project);
   // create an asset map
   const assetMap = new Map();
 
@@ -53,19 +52,20 @@ export default function ProjectPage({ project }) {
         />
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className=" text-blue-800 my-8">{children}</p>
+        <p className=" text-skin-titles-darker my-8">{children}</p>
       ),
       [BLOCKS.QUOTE]: (node, children) => (
-        <blockquote className="border-l-4 border-blue-700 pl-4 text-blue-800 my-8 italic">
+        <blockquote className="border-l-4 border-borderCol-main pl-4 text-skin-titles-darker my-8 italic">
           {children}
         </blockquote>
       ),
       [BLOCKS.UL_LIST]: (node, children) => {
         return (
           <ul
+            className="text-skin-titles-darker"
             style={{
               listStyle: "disc",
-              color: "#1E40AF",
+              color: "#1880AF",
               marginLeft: "1.5rem",
             }}
           >
@@ -76,10 +76,14 @@ export default function ProjectPage({ project }) {
         );
       },
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h4 className="font-bold text-xl my-8 text-blue-800">{children}</h4>
+        <h4 className="font-bold text-xl my-8 text-skin-titles-darker">
+          {children}
+        </h4>
       ),
       [BLOCKS.HEADING_5]: (node, children) => (
-        <h5 className="font-bold text-lg my-8 text-blue-800">{children}</h5>
+        <h5 className="font-bold text-lg my-8 text-skin-titles-darker">
+          {children}
+        </h5>
       ),
       [INLINES.HYPERLINK]: (node, children) => {
         if (node.data.uri.includes("youtube.com")) {
@@ -97,7 +101,7 @@ export default function ProjectPage({ project }) {
         } else
           return (
             <Link href={node.data.uri}>
-              <a className="text-blue-600 font-bold">{children}</a>
+              <a className="text-skin-titles font-bold">{children}</a>
             </Link>
           );
       },
@@ -105,20 +109,18 @@ export default function ProjectPage({ project }) {
   };
 
   return (
-    <div className=" bg-blue-200 pt-20 pb-20 px-8 min-h-screen sm:pt-32 sm:pb-16  sm:px-4">
+    <div className="theme-base dark:theme-terrain bg-skin-fill pt-20 pb-20 text-skin-titles-darker px-8 min-h-screen sm:pt-32 sm:pb-16  sm:px-4">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-5xl font-bold text-blue-800 mb-8">
-          {project.title}
-        </h1>
-        <h2 className="text-xl font-bold text-blue-800 mb-8">
+        <h1 className="text-5xl font-bold  mb-8">{project.title}</h1>
+        <h2 className="text-xl font-bold 0 mb-8">
           Using this text as a tagline
         </h2>
-        <h3 className="text-sm  text-blue-800 mb-8">
+        <h3 className="text-sm   mb-8">
           {format(new Date(project.date), "do MMM yyyy")}
         </h3>
-        <article className="text-blue-700">
+        <div>
           {documentToReactComponents(project.description.json, renderOptions)}
-        </article>
+        </div>
       </div>
     </div>
   );

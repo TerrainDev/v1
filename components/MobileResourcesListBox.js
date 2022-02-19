@@ -10,12 +10,12 @@ export default function MobileResourcesListBox({
   tagCount,
 }) {
   return (
-    <div className="flex w-96 justify-start items-center">
+    <div className="flex w-full md:w-96 justify-start items-center">
       <h1 className=" mr-2 text-blue-600 text-xl ">Resources</h1>
       <div className="w-full px-4 py-4 z-30 top-12">
         <Listbox value={selectedTag} onChange={setSelectedTag}>
           <div className="relative mt-1">
-            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-blue-600 border-2 border-blue-400 bg-gray-100 rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-blue-800 focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-blue-500 sm:text-lg">
+            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-blue-600 border-2 border-blue-400 bg-gray-100 rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-blue-800  focus-visible:ring-offset-2 focus-visible:border-blue-500 sm:text-lg">
               <div className="flex items-center">
                 <div
                   className={`h-2.5 w-2.5 rounded-full  mr-2 `}

@@ -7,19 +7,19 @@ export default function ResourceList({ res }) {
   const renderOptions = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className=" my-2 text-sm text-blue-900">{children}</p>
+        <p className=" my-2 text-sm text-skin-titles-darker">{children}</p>
       ),
     },
   };
 
   return (
     <Link href={res.externalUrl} passHref>
-      <a className=" group cursor-pointer relative bg-gray-100 rounded-xl w-full flex py-6 px-4 border-2 border-blue-400 hover:bg-gray-50">
+      <a className="group cursor-pointer relative bg-skin-white rounded-xl w-full flex py-6 px-4 border-2 border-borderCol-main hover:bg-skin-fill-alt">
         <div className="flex-col">
-          <h5 className="text-blue-600 text-sm font-medium mr-2 ">
+          <h5 className="text-skin-titles text-sm font-medium mr-2 ">
             {res.title}
             <ExternalLinkIcon
-              className="h-4 w-4 text-blue-600 inline-block ml-1 "
+              className="h-4 w-4 text-skin-titles inline-block ml-1 "
               aria-hidden="true"
             />
           </h5>

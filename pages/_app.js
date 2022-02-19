@@ -7,19 +7,24 @@ import Nav from "../components/Nav";
 import BottomNav from "../components/BottomNav";
 import ShopProvider from "../context/shopContext";
 import { useRouter } from "next/router";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const { pathname } = useRouter;
+  console.log(pathname);
   return (
-    <ShopProvider>
-      <Nav />
-      <Component {...pageProps} key={router.asPath} />
-      {router.asPath.includes("/resources") ||
-      router.asPath.includes("/consultancy") ||
-      router.asPath.endsWith("/") ? (
-        <BottomNav />
-      ) : null}
-    </ShopProvider>
+    <ThemeProvider attribute="class" defaultTheme="light">
+      <ShopProvider>
+        <Nav />
+        <Component {...pageProps} key={router.asPath} />
+        {router.asPath.includes("/resources") ||
+        router.asPath.includes("/services") ||
+        router.asPath.endsWith("/") ? (
+          <BottomNav />
+        ) : null}
+      </ShopProvider>
+    </ThemeProvider>
   );
 }
 

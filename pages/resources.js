@@ -54,23 +54,25 @@ export default function ResourcesPage({ resources }) {
   };
 
   return (
-    <div className="bg-blue-200 lg:bg-blue-100">
+    <div className="theme-base dark:theme-terrain bg-skin-fill lg:bg-skin-lighter-fill">
       <div className="min-w-screen flex flex-col min-h-screen overflow-y-hidden">
         <div className=" pt-16  min-h-screen ">
           <aside
-            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-blue-200  "
+            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-skin-fill  "
             aria-label="Sidebar"
           >
-            <h1 className="px-4 lg:mb-10 text-blue-600 text-xl ">Resources</h1>
+            <h1 className="px-4 lg:mb-10 text-skin-titles text-2xl font-semibold ">
+              Resources
+            </h1>
 
             {navigation.map((item, i) => (
               <div
                 key={item.name}
                 className={classNames(
                   selectedTag.id === item.id
-                    ? "bg-blue-300 hover:bg-blue-300"
-                    : "bg-blue-200 hover:bg-[#A9D2FF] ",
-                  "text-blue-600 hover:text-blue-900  group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
+                    ? "bg-skin-button-light-hover hover:text-skin-titles-darker "
+                    : "bg-skin-fill hover:bg-skin-button-light-hover hover:text-skin-titles-darker ",
+                  "text-skin-titles hover:text-skin-titles-darker  group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
                 )}
                 onClick={() => {
                   setSelectedTag(navigation[i]), filterByTag(item.id);
@@ -89,8 +91,8 @@ export default function ResourcesPage({ resources }) {
                   <button
                     className={classNames(
                       selectedTag.id === item.id
-                        ? "bg-gray-200 ring-1 ring-blue-800"
-                        : "bg-blue-300 group-hover:bg-blue-50 text-blue-900",
+                        ? "bg-skin-white ring-1 ring-borderCol-main"
+                        : "bg-skin-button-light-hover group-hover:bg-skin-white text-skin-titles-darker",
                       "ml-3 inline-block py-0.5 px-3 text-xs font-medium rounded-full "
                     )}
                   >
