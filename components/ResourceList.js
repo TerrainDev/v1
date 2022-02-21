@@ -16,7 +16,7 @@ export default function ResourceList({ res }) {
     <Link href={res.externalUrl} passHref>
       <a className="group cursor-pointer relative bg-skin-white rounded-xl w-full flex py-6 px-4 border-2 border-borderCol-main hover:bg-skin-fill-alt">
         <div className="flex-col">
-          <h5 className="text-skin-titles text-sm font-medium mr-2 ">
+          <h5 className="text-skin-titles flex items-center text-sm font-medium mr-2 ">
             {res.title}
             <ExternalLinkIcon
               className="h-4 w-4 text-skin-titles inline-block ml-1 "
