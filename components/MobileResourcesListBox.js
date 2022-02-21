@@ -11,11 +11,11 @@ export default function MobileResourcesListBox({
 }) {
   return (
     <div className="flex w-full md:w-96 justify-start items-center">
-      <h1 className=" mr-2 text-blue-600 text-xl ">Resources</h1>
+      <h1 className=" mr-2 text-skin-titles text-xl ">Resources</h1>
       <div className="w-full px-4 py-4 z-30 top-12">
         <Listbox value={selectedTag} onChange={setSelectedTag}>
           <div className="relative mt-1">
-            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-blue-600 border-2 border-blue-400 bg-gray-100 rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-blue-800  focus-visible:ring-offset-2 focus-visible:border-blue-500 sm:text-lg">
+            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-skin-titles border-2 border-borderCol-main bg-skin-white rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-borderCol-main  focus-visible:ring-offset-2 focus-visible:border-borderCol-main sm:text-lg">
               <div className="flex items-center">
                 <div
                   className={`h-2.5 w-2.5 rounded-full  mr-2 `}
@@ -30,7 +30,7 @@ export default function MobileResourcesListBox({
               </div>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <SelectorIcon
-                  className="w-5 h-5 text-blue-400"
+                  className="w-5 h-5 bg-button-light"
                   aria-hidden="true"
                 />
               </span>
@@ -41,15 +41,17 @@ export default function MobileResourcesListBox({
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="no-scrollbar absolute w-full py-1 mt-1 overflow-y-auto text-base bg-gray-100 rounded-xl shadow-lg max-h-60 ring-1 ring-blue-600 ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="no-scrollbar absolute w-full py-1 mt-1 overflow-y-auto text-base bg-skin-white rounded-xl shadow-lg max-h-60 ring-1 ring-borderCol-main ring-opacity-5 focus:outline-none sm:text-sm">
                 {navigation.map((item, i) => (
                   <Listbox.Option
                     key={i}
                     className={({ active }) =>
                       `${
-                        active ? "text-blue-600 bg-amber-100" : "text-blue-800"
+                        active
+                          ? "text-skin-titles bg-skin-lighter-fill"
+                          : "text-skin-titles-darker"
                       }
-                          cursor-default select-none relative py-2 pl-10 pr-4 flex hover:bg-blue-100`
+                          cursor-default select-none relative py-2 pl-10 pr-4 flex hover:bg-button-main`
                     }
                     value={item}
                     onClick={() => {
@@ -86,7 +88,9 @@ export default function MobileResourcesListBox({
                         {selected ? (
                           <span
                             className={`${
-                              active ? "text-blue-600" : "text-blue-600"
+                              active
+                                ? "text-skin-titles"
+                                : "text-skint-titles-main"
                             }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                           >

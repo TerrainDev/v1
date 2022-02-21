@@ -34,7 +34,7 @@ export default function Consultancy() {
           </ul>
         </nav>
         <h1 className="font-bold text-2xl mt-20 xl:hidden">SERVICES</h1>
-        <div className="pt-20 scroll-mt-20 " id="consultancy">
+        <div className="pt-8 xl:pt-20 scroll-mt-20 " id="consultancy">
           <h2 className="text-2xl font-semibold">Consultancy</h2>
           <p className="text-lg mt-4">
             If TERRAIN&apos;s vision resonates with you and you&apos;d like to

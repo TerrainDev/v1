@@ -15,19 +15,19 @@ export default function FAQ() {
         <h1 className="text-skin-titles-darker mb-8 font-medium text-2xl lg:text-4xl pl-2">
           FAQ / HELP
         </h1>
-        <div className="w-full  p-2  bg-skin-lighter-fill text-skin-titles-darker rounded-2xl">
+        <div className="w-full  p-2 bg-borderCol-main  sm:bg-skin-lighter-fill text-skin-titles-darker rounded-2xl">
           <Disclosure as="div">
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-lg font-medium text-left bg-skin-fill rounded-lg hover:bg-green-200  dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     How is TERRAIN funded? Are you a not for profit
                     organisation?
                   </span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-skin-titles-darker`}
+                    } w-6 h-6 text-skin-titles-darker hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -76,11 +76,11 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
-                    Can I support TERRAIN?
-                  </span>
+                  <span className=" sm:w-full">Can I support TERRAIN?</span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -113,11 +113,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Do you take interns and volunteers?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -145,11 +147,11 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
-                    Where are you located?
-                  </span>
+                  <span className=" sm:w-full">Where are you located?</span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -172,11 +174,11 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
-                    Can we collaborate?
-                  </span>
+                  <span className=" sm:w-full">Can we collaborate?</span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -202,11 +204,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     What do you send in the newsletter if I subscribe?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -231,11 +235,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Can you explain your digital garden and resources?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6  hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -307,11 +313,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Bookshelf orders, location and hours
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -350,11 +358,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Bookshelf exchanges and refunds
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -382,11 +392,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     How is the Bookshelf shipping carbon negative?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6  hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -418,11 +430,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     How does One Tree Planted work?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6  hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -458,11 +472,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Do you sell anything besides Books?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block `}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -499,12 +515,14 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Can you elaborate on the physical and digital aspects of
                     TERRAIN?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -545,11 +563,13 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
-                  <span className="w-[280px] sm:w-full">
+                  <span className=" sm:w-full">
                     Is TERRAIN part of a social justice movement?
                   </span>
                   <GlobeIcon
-                    className={`${open ? "transform rotate-180" : ""} w-6 h-6 `}
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-6 h-6 hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
