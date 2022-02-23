@@ -9,17 +9,17 @@ export default function FAQ() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="theme-base dark:theme-terrain bg-skin-fill"
+      className="theme-base dark:theme-terrain bg-white"
     >
       <div className="  w-full px-4 py-24 max-w-4xl mx-auto">
-        <h1 className="text-skin-titles-darker mb-8 font-medium text-2xl lg:text-4xl pl-2">
+        <h1 className="text-blue mb-8 font-medium text-2xl lg:text-4xl pl-2">
           FAQ / HELP
         </h1>
-        <div className="w-full  p-2 bg-borderCol-main  sm:bg-skin-lighter-fill text-skin-titles-darker rounded-2xl">
+        <div className="w-full  p-2 bg-green  text-blue rounded-2xl">
           <Disclosure as="div">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-lg font-medium text-left bg-skin-fill rounded-lg hover:bg-green-200  dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center w-full px-4 py-2 text-lg font-medium text-left bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     How is TERRAIN funded? Are you a not for profit
                     organisation?
@@ -27,7 +27,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-skin-titles-darker hidden md:block`}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -38,7 +38,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     <p>
                       We are a for-profit initiative and choose to be so in
                       order to enable the longevity of our work, and remove
@@ -75,12 +75,12 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">Can I support TERRAIN?</span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -91,7 +91,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     We are still getting on our feet and starting up, and so
                     extra financial support at this time is greatly appreciated
                     and highly felt. If you are a philanthropic organisation,
@@ -112,14 +112,14 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Do you take interns and volunteers?
                   </span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -130,7 +130,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     The short answer is yes, drop us an email to
                     hello@terrain.earth with a little introduction, your
                     curiosity and a CV. However, the long answer is that we
@@ -146,12 +146,12 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">Where are you located?</span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -162,7 +162,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     37.8136° S 144.9631° E; Wurundjeri Land, Melbourne,
                     Australia, Earth.
                   </Disclosure.Panel>
@@ -173,12 +173,12 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">Can we collaborate?</span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -189,7 +189,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     Our projects are either directly conceived or collaborative
                     from the get-go - they can be one-off or ongoing. We are
                     open to collaboration on projects and we&apos;d love to hear
@@ -203,14 +203,14 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     What do you send in the newsletter if I subscribe?
                   </span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -221,7 +221,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     Updates on upcoming happenings by us and our friends, new
                     arrivals to the Bookshelf, and the occasional music playlist
                     with what we&apos;re listening to. We don&apos;t send them
@@ -234,7 +234,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Can you explain your digital garden and resources?
                   </span>
@@ -252,7 +252,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     <p>
                       It comes as no surprise that the Internet borrows language
                       from nature (i.e. mouse, stream, root, tree, bug, cloud,
@@ -312,7 +312,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Bookshelf orders, location and hours
                   </span>
@@ -330,7 +330,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     All orders are available for local delivery, pick-up or 100%
                     carbon negative Australia wide shipping (via
                     <Link href={"https://try.sendle.com/en-au/impact"}>
@@ -357,14 +357,14 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Bookshelf exchanges and refunds
                   </span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -375,7 +375,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     We're unable to offer refunds for change of mind, but you
                     can return a book to us within 14 days for an exchange or
                     store-credit if it's in as-new condition (no scuffs or
@@ -391,7 +391,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     How is the Bookshelf shipping carbon negative?
                   </span>
@@ -409,7 +409,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     Shipping with
                     <Link href={"https://try.sendle.com/en-au/impact"}>
                       <a rel="noopener noreferrer" target="_blank">
@@ -429,7 +429,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     How does One Tree Planted work?
                   </span>
@@ -447,7 +447,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     One Book = One Tree Planted. For every book sold we'll be
                     planting one tree on your behalf. We&apos;ve partnered with
                     <Link
@@ -471,14 +471,14 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Do you sell anything besides Books?
                   </span>
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 hidden md:block `}
+                    } w-6 h-6 text-blue hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -489,7 +489,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     Essentially, you can&apos;t buy TERRAIN, you can only engage
                     with it presently; as it is not a thwarted attempt to join
                     the commerce bandwagon, there is no face oil or incense that
@@ -514,7 +514,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Can you elaborate on the physical and digital aspects of
                     TERRAIN?
@@ -533,7 +533,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     TERRAIN encompasses digital and physical aspects. Both are
                     equally important for how TERRAIN functions - with the
                     different spaces they occupy and the people they interact
@@ -562,7 +562,7 @@ export default function FAQ() {
           <Disclosure as="div" className="mt-2">
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-skin-fill rounded-lg hover:bg-green-200 dark:hover:bg-borderCol-main focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
+                <Disclosure.Button className="flex justify-between items-center  w-full px-4 py-2 text-lg font-medium text-left  bg-white rounded-lg hover:bg-gray  focus:outline-none focus-visible:ring focus-visible:ring-green-500 focus-visible:ring-opacity-75">
                   <span className=" sm:w-full">
                     Is TERRAIN part of a social justice movement?
                   </span>
@@ -580,7 +580,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md ">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
                     <p>
                       In the phrase “social justice” we question what exactly we
                       refer to when we say social. There are incredible acts of
@@ -636,7 +636,7 @@ export default function FAQ() {
           <a
             href="mailto:contact@terrain.earth"
             target="_blank"
-            className="text-green-500 hover:text-green-600 dark:text-borderCol-main pl-2"
+            className="text-green hover:opacity-70 pl-2"
           >
             contact@terrain.earth
           </a>

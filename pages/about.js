@@ -26,12 +26,12 @@ export default function About() {
   };
 
   return (
-    <div className="theme-base dark:theme-terrain min-h-screen bg-skin-fill relative">
+    <div className="theme-base dark:theme-terrain min-h-screen bg-green relative">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-20 pb-32 mx-auto w-full flex flex-col max-w-4xl px-4 text-skin-titles-darker text-xl tracking-tight "
+        className="relative z-20 pb-32 mx-auto w-full flex flex-col max-w-4xl px-4 text-blue text-xl tracking-tight "
       >
         <motion.h1 className="pt-32 text-2xl font-semibold tracking-tighter">
           TERRAIN is an initiative and platform designed to remind humans that
@@ -78,7 +78,7 @@ export default function About() {
         <motion.p className="my-4 ">
           [Click{" "}
           <motion.span
-            className="text-skin-titles underline cursor-pointer hover:text-skin-titles-hover"
+            className="text-darkerBlue underline cursor-pointer hover:text-blue"
             onClick={() => setShowMore(!showMore)}
           >
             here
@@ -197,7 +197,7 @@ export default function About() {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="text-skin-titles underline hover:text-skin-titles-hover"
+                  className="text-blue underline hover:text-darkerBlue"
                 >
                   native-land.ca
                 </a>

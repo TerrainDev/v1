@@ -2,6 +2,8 @@ import { useState } from "react";
 import { getProjects } from "../lib/contentfulHelper";
 import ProjectCard from "../components/ProjectCard";
 import Masonry from "react-masonry-css";
+import { format } from "date-fns";
+import Clock from "../components/Clock";
 
 export default function Home({ projects }) {
   const [showProjects, setShowProjects] = useState(projects);
@@ -31,31 +33,47 @@ export default function Home({ projects }) {
   };
 
   return (
-    <div className="theme-base dark:theme-terrain bg-skin-fill min-h-screen">
+    <div className="theme-base dark:theme-terrain bg-white min-h-screen">
       <div className=" py-16 px-4  sm:px-6 lg:max-w-full lg:px-8">
-        <div className="my-4 flex items-center text-skin-titles">
-          <h1 className="mr-4 text-xl">Projects </h1>
-          <button
-            type="button"
-            className="mr-2 relative inline-flex items-center px-4 py-1 rounded-full border border-borderCol-main bg-skin-button-light text-sm font-medium text-skin-titles hover:bg-skin-button-light-hover focus:z-10 focus:outline-none focus:ring-1 focus:ring-borderCol-main focus:border-borderCol-main focus:bg-skin-button-light-hover"
-            onClick={onlyUpcomingProjects}
-          >
-            Upcoming
-          </button>
-          <button
-            type="button"
-            className="mr-2 relative inline-flex items-center px-4 py-1 rounded-full border border-borderCol-main bg-skin-button-light text-sm font-medium text-skin-titles hover:bg-skin-button-light-hover focus:z-10 focus:outline-none focus:ring-1 focus:ring-borderCol-main focus:border-borderCol-main focus:bg-skin-button-light-hover"
-            onClick={onlyPastProjects}
-          >
-            Past
-          </button>
-          <button
-            type="button"
-            className="relative inline-flex items-center px-4 py-1 rounded-full border border-borderCol-main bg-skin-button-light text-sm font-medium text-skin-titles hover:bg-skin-button-light-hover focus:z-10 focus:outline-none focus:ring-1 focus:ring-borderCol-main focus:border-borderCol-main focus:bg-skin-button-light-hover"
-            onClick={() => setShowProjects(projects)}
-          >
-            All
-          </button>
+        <div className="flex lg:hidden text-blue  pt-2">
+          <Clock />
+          <span className="tracking-tighter ">
+            {format(new Date(), "eeee LLL dd yyyy")}
+          </span>
+        </div>
+
+        <div className="my-4 flex items-center justify-between text-blue">
+          <div className="flex">
+            <h1 className="mr-4 text-xl">Projects </h1>
+            <button
+              type="button"
+              className=" mr-2 relative inline-flex items-center px-4 py-1 rounded-full border border-green bg-white text-sm font-medium  hover:bg-gray  focus:z-10 focus:outline-none focus:ring-1 focus:ring-green focus:border-green focus:bg-gray"
+              onClick={onlyUpcomingProjects}
+            >
+              Upcoming
+            </button>
+            <button
+              type="button"
+              className=" mr-2 relative inline-flex items-center px-4 py-1 rounded-full border border-green bg-white text-sm font-medium  hover:bg-gray  focus:z-10 focus:outline-none focus:ring-1 focus:ring-green focus:border-green focus:bg-gray"
+              onClick={onlyPastProjects}
+            >
+              Past
+            </button>
+            <button
+              type="button"
+              className=" mr-2 relative inline-flex items-center px-4 py-1 rounded-full border border-green bg-white text-sm font-medium  hover:bg-gray  focus:z-10 focus:outline-none focus:ring-1 focus:ring-green focus:border-green focus:bg-gray"
+              onClick={() => setShowProjects(projects)}
+            >
+              All
+            </button>
+          </div>
+          <div className="hidden lg:flex ">
+            <Clock />
+            {/* DATE */}
+            <span className="tracking-tighter">
+              {format(new Date(), "eeee LLL dd yyyy")}
+            </span>
+          </div>
         </div>
         <Masonry
           breakpointCols={breakpoints}

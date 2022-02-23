@@ -29,16 +29,22 @@ export default function Nav() {
     <nav
       className={
         router.asPath.includes("/resources")
-          ? "theme-base dark:theme-terrain bg-skin-fill w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
+          ? "theme-base dark:theme-terrain bg-white w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
           : "theme-base dark:theme-terrain backdrop-blur-sm w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
       }
     >
       <Link href="/">
-        <h1 className=" cursor-pointer text-xl font-medium text-skin-titles ">
+        <h1
+          className={
+            router.asPath.match("/contact")
+              ? "text-white cursor-pointer text-xl font-medium hover:text-green "
+              : "text-blue cursor-pointer text-xl font-medium"
+          }
+        >
           TERRAIN
         </h1>
       </Link>
-      <div className="hidden lg:flex lg:items-center lg:justify-center font-medium text-xl cursor-pointer text-right text-skin-titles ">
+      <div className="hidden lg:flex lg:items-center lg:justify-center font-medium text-xl cursor-pointer text-right text-blue ">
         {router.asPath.match("/bookshelf") ? (
           <button
             className="font-medium inline-block text-right mr-4  "
@@ -48,24 +54,56 @@ export default function Nav() {
           </button>
         ) : (
           <Link href="../bookshelf">
-            <h4 className="mr-4 hover:text-skin-titles-darker">BOOKSHELF</h4>
+            <h4
+              className={
+                router.asPath.match("/contact")
+                  ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
+                  : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+              }
+            >
+              BOOKSHELF
+            </h4>
           </Link>
         )}
         <Link href="../about">
-          <h4 className="mr-4 hover:text-skin-titles-darker">ABOUT</h4>
+          <h4
+            className={
+              router.asPath.match("/contact")
+                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
+                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+            }
+          >
+            ABOUT
+          </h4>
         </Link>
         <Link href="../faq">
-          <h4 className="mr-4 hover:text-skin-titles-darker">FAQ</h4>
+          <h4
+            className={
+              router.asPath.match("/contact")
+                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
+                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+            }
+          >
+            FAQ
+          </h4>
         </Link>
         <Link href="../contact">
-          <h4 className="mr-4 hover:text-skin-titles-darker">CONTACT</h4>
+          <h4
+            className={
+              router.asPath.match("/contact")
+                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
+                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+            }
+          >
+            CONTACT
+          </h4>
         </Link>
         <Toggle />
       </div>
       <Menu as="div" className="relative inline-block text-left lg:hidden">
         <div className="flex items-center ">
           {router.asPath.match("/bookshelf") ? (
-            <div className="flex items-center text-right text-skin-titles cursor-pointer mr-4 text-xl hover:text-skin-titles-hover">
+            <div className="flex items-center text-right text-blue cursor-pointer mr-4 text-xl hover:text-darker-blue">
               <button
                 className="font-medium tracking-tighter"
                 onClick={() => setCartOpen(!cartOpen)}
@@ -81,13 +119,25 @@ export default function Nav() {
             </div>
           ) : (
             <Link href="../bookshelf">
-              <h4 className="text-right text-skin-titles cursor-pointer mr-4 text-xl font-medium hover:text-skin-titles-hover">
+              <h4
+                className={
+                  router.asPath.match("/contact")
+                    ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
+                    : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                }
+              >
                 BOOKSHELF
               </h4>
             </Link>
           )}
 
-          <Menu.Button className="inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-skin-titles bg-gray-400 rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-opacity-75">
+          <Menu.Button
+            className={
+              router.asPath.match("/contact")
+                ? "inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-green bg-gray rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-darkerBlue focus-visible:ring-opacity-75 "
+                : "inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-blue bg-gray rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-darkerBlue focus-visible:ring-opacity-75"
+            }
+          >
             <DotsVerticalIcon className="h-5 w-5" aria-hidden="true" />
           </Menu.Button>
         </div>
@@ -100,13 +150,13 @@ export default function Nav() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 z-50 w-32 mt-2 origin-top-right bg-skin-lighter-fill divide-y divide-red-600 rounded-lg shadow-md ring-1 ring-borderCol-main ring-opacity-70 focus:outline-none">
+          <Menu.Items className="absolute right-0 z-50 w-32 mt-2 origin-top-right bg-white  rounded-lg shadow-md ring-1 ring-green ring-opacity-70 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {() => (
                   <Link href="/about" passHref>
                     <a>
-                      <button className=" text-skin-titles hover:text-skin-titles-hover text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-skin-fill">
+                      <button className=" text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         ABOUT
                       </button>
                     </a>
@@ -117,7 +167,7 @@ export default function Nav() {
                 {() => (
                   <Link href="/faq" passHref>
                     <a>
-                      <button className=" text-skin-titles hover:text-skin-titles-hover text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-skin-fill">
+                      <button className="  text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         F.A.Q
                       </button>
                     </a>
@@ -128,7 +178,7 @@ export default function Nav() {
                 {() => (
                   <Link href="/contact" passHref>
                     <a>
-                      <button className=" text-skin-titles hover:text-skin-titles-hover text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-skin-fill">
+                      <button className="  text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         CONTACT
                       </button>
                     </a>
@@ -141,7 +191,7 @@ export default function Nav() {
                     onClick={() =>
                       setTheme(theme === "light" ? "dark" : "light")
                     }
-                    className=" text-skin-titles hover:text-skin-titles-hover text-right rounded-md w-full px-2 py-2 text-sm  font-medium hover:bg-skin-fill"
+                    className=" text-blue hover:text-darkerBlue text-right rounded-md w-full px-2 py-2 text-sm  font-medium hover:bg-gray"
                   >
                     {theme === "light" ? "THEME: Water" : "THEME: Earth"}
                   </button>

@@ -40,7 +40,7 @@ class MyDocument extends Document {
             rel="mask-icon"
           />
         </Head>
-        <body className="bg-skin-fill theme-base dark:theme-terrain  ">
+        <body className="bg-skin-fill theme-base dark:bg-white  ">
           <Main />
           <NextScript />
         </body>

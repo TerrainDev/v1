@@ -11,22 +11,16 @@ export default function Consultancy() {
   ];
 
   return (
-    <div className="theme-base dark:theme-terrain bg-skin-fill">
-      <div className="theme-base  scroll-smooth  max-w-4xl mx-auto text-skin-titles px-4">
+    <div className="theme-base dark:theme-terrain bg-white">
+      <div className="theme-base  scroll-smooth  max-w-4xl mx-auto text-blue px-4">
         <nav className="fixed z-40 top-20 left-8 hidden xl:block text-sm">
-          <h1 className=" text-skin-titles text-2xl font-semibold ">
-            Services
-          </h1>
+          <h1 className=" text-blue text-2xl font-semibold ">Services</h1>
           <ul className="space-y-2 mt-4">
             {nav.map((n, i) => (
               <li
                 key={n.id}
                 onClick={() => setActive(n.id)}
-                className={
-                  active === n.id
-                    ? "text-skin-titles-hover"
-                    : "text-skin-titles"
-                }
+                className={active === n.id ? "text-darkerBlue" : "text-blue"}
               >
                 <a href={`${n.id}`}>{n.title}</a>
               </li>

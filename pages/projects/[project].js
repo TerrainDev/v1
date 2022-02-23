@@ -52,17 +52,17 @@ export default function ProjectPage({ project }) {
         />
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className=" text-skin-titles-darker my-8">{children}</p>
+        <p className=" text-blue my-8">{children}</p>
       ),
       [BLOCKS.QUOTE]: (node, children) => (
-        <blockquote className="border-l-4 border-borderCol-main pl-4 text-skin-titles-darker my-8 italic">
+        <blockquote className="border-l-4 border-green pl-4 text-blue my-8 italic">
           {children}
         </blockquote>
       ),
       [BLOCKS.UL_LIST]: (node, children) => {
         return (
           <ul
-            className="text-skin-titles-darker"
+            className="text-blue"
             style={{
               listStyle: "disc",
               color: "#1880AF",
@@ -76,14 +76,10 @@ export default function ProjectPage({ project }) {
         );
       },
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h4 className="font-bold text-xl my-8 text-skin-titles-darker">
-          {children}
-        </h4>
+        <h4 className="font-bold text-xl my-8 text-blue">{children}</h4>
       ),
       [BLOCKS.HEADING_5]: (node, children) => (
-        <h5 className="font-bold text-lg my-8 text-skin-titles-darker">
-          {children}
-        </h5>
+        <h5 className="font-bold text-lg my-8 text-blue">{children}</h5>
       ),
       [INLINES.HYPERLINK]: (node, children) => {
         if (node.data.uri.includes("youtube.com")) {
@@ -101,7 +97,7 @@ export default function ProjectPage({ project }) {
         } else
           return (
             <Link href={node.data.uri}>
-              <a className="text-skin-titles font-bold">{children}</a>
+              <a className="text-blue font-bold">{children}</a>
             </Link>
           );
       },
@@ -109,7 +105,7 @@ export default function ProjectPage({ project }) {
   };
 
   return (
-    <div className="theme-base dark:theme-terrain bg-skin-fill pt-20 pb-20 text-skin-titles-darker px-8 min-h-screen sm:pt-32 sm:pb-16  sm:px-4">
+    <div className="theme-base dark:theme-terrain bg-white pt-20 pb-20 text-blue px-8 min-h-screen sm:pt-32 sm:pb-16  sm:px-4">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-5xl font-bold  mb-8">{project.title}</h1>
         <h2 className="text-xl font-bold 0 mb-8">

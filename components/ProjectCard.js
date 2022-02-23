@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
     },
   };
   return (
-    <div className="theme-base dark:theme-terrain group relative bg-skin-lighter-fill border border-borderCol-main rounded-lg flex flex-col overflow-hidden">
+    <div className="theme-base dark:theme-terrain group relative bg-skin-lighter-fill border border-green rounded-lg flex flex-col overflow-hidden">
       <div className="aspect-w-4 aspect-h-3 h-48  group-hover:opacity-75  ">
         <Link href={`/projects/${slug}`} passHref>
           <a>
@@ -41,19 +41,19 @@ export default function ProjectCard({ project }) {
         </Link>
       </div>
       <div className="flex flex-col flex-1 p-4 space-y-2 ">
-        <div className="flex">
+        <div className="flex items-center">
           <p className="text-xs text-skin-titles font-bold mr-2">
             {format(new Date(date), "do MMM yyyy")}
           </p>
           {Date.parse(date) > new Date() && (
-            <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 font-bold text-xs underline ">
+            <h4 className=" text-green font-bold text-[10px] py-1 px-2 bg-blue border-2 border-green rounded-full ">
               UPCOMING
             </h4>
           )}
         </div>
 
         <h3 className="text-sm font-bold text-skin-titles">{title}</h3>
-        <div className="text-sm text-skin-titles-darker font-medium ">
+        <div className="text-sm text-steel font-medium ">
           {documentToReactComponents(shortDescription.json, renderOptions)}
         </div>
         <div className="flex-1 flex flex-col justify-end">

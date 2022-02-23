@@ -6,39 +6,37 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="theme-base dark:theme-terrain bg-skin-fill "
+      className="theme-base dark:theme-terrain bg-blue "
     >
       <div className=" py-32 max-w-4xl mx-auto min-h-screen px-4 ">
-        <h1 className="font-semibold text-4xl text-skin-titles-darker ">
-          CONTACT
-        </h1>
-        <div className=" columns-sm py-12 lg:py-24 ">
+        <h1 className="font-semibold text-4xl text-white ">CONTACT</h1>
+        <div className=" columns-sm py-12 lg:py-24 text-white">
           <div className="space-y-4">
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; EMAIL
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; INSTAGRAM
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; TWITTER
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; TWITCH
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; SPOTIFY
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; ARE.NA
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; FACEBOOK
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; URBIT (coming soon)
             </p>
-            <p className="font-medium text-2xl text-skin-titles-darker cursor-pointer hover:opacity-80 ">
+            <p className="font-medium text-2xl  cursor-pointer hover:text-green ">
               &rarr; NEWSLETTER
             </p>
           </div>
@@ -57,7 +55,7 @@ export default function Contact() {
           ></iframe>
         </div> */}
         </div>
-        <div className="font-medium text-xl text-skin-titles-darker">
+        <div className="font-medium text-xl text-white">
           TERRAIN Projects, <br />
           P.O Box 4196, Fitzroy, <br />
           VIC, 3065, Australia.

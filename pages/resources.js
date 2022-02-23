@@ -54,14 +54,14 @@ export default function ResourcesPage({ resources }) {
   };
 
   return (
-    <div className="theme-base dark:theme-terrain bg-skin-fill lg:bg-skin-lighter-fill">
+    <div className="theme-base dark:theme-terrain bg-white lg:bg-gray">
       <div className="min-w-screen flex flex-col min-h-screen overflow-y-hidden">
         <div className=" pt-16  min-h-screen ">
           <aside
-            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-skin-fill  "
+            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-white"
             aria-label="Sidebar"
           >
-            <h1 className="px-4 lg:mb-10 text-skin-titles text-2xl font-semibold ">
+            <h1 className="px-4 lg:mb-10 text-blue text-2xl font-semibold ">
               Resources
             </h1>
 
@@ -70,29 +70,21 @@ export default function ResourcesPage({ resources }) {
                 key={item.name}
                 className={classNames(
                   selectedTag.id === item.id
-                    ? "bg-skin-button-light-hover hover:text-skin-titles-darker "
-                    : "bg-skin-fill hover:bg-skin-button-light-hover hover:text-skin-titles-darker ",
-                  "text-skin-titles hover:text-skin-titles-darker  group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
+                    ? "bg-steel hover:text-white text-green"
+                    : "bg-white hover:bg-gray text-blue hover:text-green ",
+                  " hover:text-darkerBlue group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
                 )}
                 onClick={() => {
                   setSelectedTag(navigation[i]), filterByTag(item.id);
                 }}
               >
-                <div
-                  className={`h-2.5 w-2.5 rounded-full  mr-4`}
-                  style={{
-                    backgroundColor: item.color
-                      ? `${item.color}`
-                      : "transparent",
-                  }}
-                ></div>
                 <span className="flex-1">{item.name}</span>
                 {
                   <button
                     className={classNames(
                       selectedTag.id === item.id
-                        ? "bg-skin-white ring-1 ring-borderCol-main"
-                        : "bg-skin-button-light-hover group-hover:bg-skin-white text-skin-titles-darker",
+                        ? "bg-white ring-2 ring-green text-blue font-bold"
+                        : "bg-blue group-hover:bg-darkerBlue text-green",
                       "ml-3 inline-block py-0.5 px-3 text-xs font-medium rounded-full "
                     )}
                   >

@@ -18,17 +18,17 @@ export default function BottomNav() {
       className="theme-base dark:theme-terrain w-full max-w-full px-16 sm:px-16 flex justify-center fixed bottom-8 z-50 "
     >
       <Tab.Group manual>
-        <Tab.List className="shadow-md shadow-borderCol-main/20 flex items-center w-80 bg-skin-white rounded-full border-2 border-borderCol-main sm:w-[24rem] sm:bottom-8">
+        <Tab.List className="shadow-lg shadow-green/20 flex items-center w-80 bg-white rounded-full border-2 border-blue sm:w-[24rem] sm:bottom-8">
           <Link href={"/"} passHref>
             <a className="w-full ">
               <Tab
                 className={() =>
                   classNames(
                     " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-skin-titles  hover:text-skin-titles-darker",
+                    "focus:outline-none text-blue hover:text-darkerBlue",
                     router.asPath.endsWith("/")
-                      ? "bg-skin-lighter-fill"
-                      : "bg-skin-white"
+                      ? "bg-green text-blue"
+                      : "bg-white"
                   )
                 }
               >
@@ -41,11 +41,11 @@ export default function BottomNav() {
               <Tab
                 className={() =>
                   classNames(
-                    "w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-skin-titles  hover:text-skin-titles-darker",
+                    " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
+                    "focus:outline-none text-blue  hover:text-darkerBlue",
                     router.asPath === "/resources"
-                      ? "bg-skin-lighter-fill"
-                      : "bg-skin-white"
+                      ? "bg-green text-blue"
+                      : "bg-white"
                   )
                 }
               >
@@ -58,11 +58,11 @@ export default function BottomNav() {
               <Tab
                 className={() =>
                   classNames(
-                    "w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-skin-titles  hover:text-skin-titles-darker",
+                    " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
+                    "focus:outline-none text-blue  hover:text-darkerBlue",
                     router.asPath === "/services"
-                      ? "bg-skin-lighter-fill"
-                      : "bg-skin-white"
+                      ? "bg-green text-blue"
+                      : "bg-white"
                   )
                 }
               >

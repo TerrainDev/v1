@@ -14,7 +14,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "borderCol-main": withOpacity("--color-borderCol-main"),
+        green: withOpacity("--color-green"),
+        blue: withOpacity("--color-blue"),
+        darkerBlue: withOpacity("--color-darkerBlue"),
+        white: withOpacity("--color-white"),
+        gray: withOpacity("--color-gray"),
+        steel: withOpacity("--color-steel"),
       },
       textColor: {
         skin: {
