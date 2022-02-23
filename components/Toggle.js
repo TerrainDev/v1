@@ -11,9 +11,9 @@ export default function Toggle() {
   return (
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="text-skin-titles border border-borderCol-main w-16 rounded-full font-semibold text-sm px-2 bg-skin-button-light hover:bg-skin-button-light-hover "
+      className="text-blue border border-green w-16 rounded-full font-semibold text-sm px-2 bg-white hover:bg-gray "
     >
-      {theme === "light" ? "Water" : "Earth"}
+      {theme === "light" ? "Other" : "Earth"}
     </button>
   );
 }

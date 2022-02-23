@@ -12,7 +12,7 @@ import { ThemeProvider } from "next-themes";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <ShopProvider>
         <Nav />
         <Component {...pageProps} key={router.asPath} />

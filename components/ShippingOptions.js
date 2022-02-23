@@ -3,7 +3,7 @@ export default function ShippingOptions() {
     <fieldset>
       <legend className="sr-only">Shipping Option</legend>
       <div className="space-y-5 ">
-        <h5 className="divide-y-2 mt-6 text-skin-titles-darker text-md font-medium">
+        <h5 className="divide-y-2 mt-6 text-darkerBlue text-md font-medium">
           How to get it
         </h5>
         <div className="relative flex items-start">
@@ -14,14 +14,11 @@ export default function ShippingOptions() {
               name="shipping option"
               type="radio"
               defaultChecked
-              className="focus:ring-borderCol-main h-4 w-4 text-skin-titles border-gray-300"
+              className="focus:ring-green h-4 w-4 text-blue border-green"
             />
           </div>
           <div className="ml-3 text-sm">
-            <label
-              htmlFor="Shipping"
-              className="font-medium text-skin-titles-darker"
-            >
+            <label htmlFor="Shipping" className="font-medium text-darkerBlue">
               Shipping
             </label>
           </div>
@@ -33,17 +30,17 @@ export default function ShippingOptions() {
               aria-describedby="Local Delivery"
               name="shipping option"
               type="radio"
-              className="focus:ring-borderCol-main h-4 w-4 text-skin-titles border-borderCol-main"
+              className="focus:ring-green h-4 w-4 text-blue border-green"
             />
           </div>
           <div className="ml-3 text-sm">
             <label
               htmlFor="Local Delivery"
-              className="font-medium text-skin-titles-darker"
+              className="font-medium text-darkerBlue"
             >
               Local Delivery
             </label>
-            <p className="text-skin-titles underline">Enter delivery address</p>
+            <p className="text-blue underline">Enter delivery address</p>
           </div>
         </div>
         <div className="relative flex items-start">
@@ -53,17 +50,17 @@ export default function ShippingOptions() {
               aria-describedby="Store pickup"
               name="shipping option"
               type="radio"
-              className="focus:ring-borderCol-main h-4 w-4 text-skin-titles border-borderCol-main"
+              className="focus:ring-greenh-4 w-4 text-blue border-green"
             />
           </div>
           <div className="ml-3 text-sm">
             <label
               htmlFor="Store pickup"
-              className="font-medium text-skin-titles-darker"
+              className="font-medium text-darkerBlue"
             >
               Store pickup
             </label>
-            <p className="text-skin-titles ">
+            <p className="text-blue ">
               TERRAIN Projects <br />
               Studio 1/30b Perry Street Collingwood VIC
             </p>

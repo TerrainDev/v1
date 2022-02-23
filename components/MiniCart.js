@@ -22,7 +22,7 @@ export default function MiniCart({ cart }) {
       <Dialog
         initialFocus={cancelButtonRef}
         as="div"
-        className="fixed z-50 inset-0 overflow-hidden"
+        className="fixed z-50 inset-0 overflow-hidden theme-base dark:theme-terrain "
         onClose={() => {
           setCartOpen(!cartOpen);
         }}
@@ -51,17 +51,17 @@ export default function MiniCart({ cart }) {
               leaveTo="translate-x-full"
             >
               <div className="w-screen max-w-md ">
-                <div className="h-full flex flex-col bg-skin-fill shadow-xl overflow-y-scroll">
+                <div className="h-full flex flex-col bg-blue shadow-xl overflow-y-scroll">
                   <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <Dialog.Title className="text-lg font-medium text-skin-titles">
+                      <Dialog.Title className="text-lg font-medium text-green">
                         Shopping cart
                       </Dialog.Title>
                       <div className="ml-3 h-7 flex items-center">
                         <button
                           ref={cancelButtonRef}
                           type="button"
-                          className="-m-2 p-2 text-skin-titles hover:text-skin-titles-darker"
+                          className="-m-2 p-2 text-green hover:text-gray"
                           onClick={() => setCartOpen(false)}
                         >
                           <span className="sr-only">Close panel</span>
@@ -75,11 +75,11 @@ export default function MiniCart({ cart }) {
                         {cart.length > 0 ? (
                           <ul
                             role="list"
-                            className="-my-6 divide-y divide-borderCol-main"
+                            className="-my-6 divide-y divide-green"
                           >
                             {cart.map((product) => (
                               <li key={product.id} className="py-6 flex">
-                                <div className="relative flex-shrink-0 w-24 h-24 border border-borderCol-main rounded-md overflow-hidden ">
+                                <div className="relative flex-shrink-0 w-24 h-24 border border-green rounded-md overflow-hidden ">
                                   <Link
                                     href={`/shop/${product.handle}`}
                                     passHref
@@ -98,8 +98,8 @@ export default function MiniCart({ cart }) {
 
                                 <div className="ml-4 flex-1 flex flex-col">
                                   <div>
-                                    <div className="flex justify-between text-base font-medium text-skin-titles">
-                                      <h3 className="hover:text-skin-titles-darker">
+                                    <div className="flex justify-between text-base font-medium text-white">
+                                      <h3 className="hover:text-gray">
                                         <Link
                                           href={`/shop/${product.handle}`}
                                           passHref
@@ -118,7 +118,7 @@ export default function MiniCart({ cart }) {
                                     </p>
                                   </div>
                                   <div className="flex-1 flex items-end justify-between text-sm">
-                                    <p className="text-skin-titles">
+                                    <p className="text-white">
                                       Qty {product.variantQuantity}
                                     </p>
 
@@ -128,7 +128,7 @@ export default function MiniCart({ cart }) {
                                           removeCartItem(product.id)
                                         }
                                         type="button"
-                                        className="font-medium text-skin-titles hover:ttext-skin-titles-darker"
+                                        className="font-medium text-green hover:underline"
                                       >
                                         Remove
                                       </button>
@@ -140,7 +140,7 @@ export default function MiniCart({ cart }) {
                           </ul>
                         ) : (
                           <div>
-                            <p className="font-medium text-skin-titles ">
+                            <p className="font-medium text-white ">
                               Nothing in your cart!
                             </p>
                           </div>
@@ -150,27 +150,27 @@ export default function MiniCart({ cart }) {
                   </div>
                   {cart.length > 0 ? (
                     <div className="border-t border-borderCol-main py-6 px-4 sm:px-6">
-                      <div className="flex justify-between text-base font-medium text-skin-titles-darker">
+                      <div className="flex justify-between text-base font-medium text-white">
                         <p>Subtotal</p>
                         <p>{formatPrice(cartTotal)}</p>
                       </div>
-                      <p className="mt-0.5 text-sm text-skin-titles">
+                      <p className="mt-0.5 text-sm text-white">
                         Shipping and taxes calculated at checkout.
                       </p>
                       <div className="mt-6">
                         <a
                           href={checkoutUrl}
-                          className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-800"
+                          className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-blue bg-green opacity-90 hover:opacity-100"
                         >
                           Checkout
                         </a>
                       </div>
-                      <div className="mt-6 flex justify-center text-sm text-center text-skin-titles">
+                      <div className="mt-6 flex justify-center text-sm text-center text-white">
                         <p>
                           or{" "}
                           <button
                             type="button"
-                            className="font-medium hover:text-skin-titles-darker"
+                            className="font-medium  hover:text-gray"
                             onClick={() => setCartOpen(false)}
                           >
                             Continue Shopping
