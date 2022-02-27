@@ -7,7 +7,9 @@ export default function ResourceList({ res }) {
   const renderOptions = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className=" my-2 text-sm text-skin-titles-darker">{children}</p>
+        <p className=" my-2 text-sm text-darkerBlue dark:text-slate-800">
+          {children}
+        </p>
       ),
     },
   };
@@ -17,13 +19,13 @@ export default function ResourceList({ res }) {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        className="group cursor-pointer relative bg-white rounded-xl w-full flex py-6 px-4 border-2 border-green hover:bg-gray"
+        className="group cursor-pointer relative bg-white rounded-xl w-full flex py-6 px-4 border-2 border-green dark:border-steel hover:bg-gray dark:hover:border-black"
       >
         <div className="flex-col">
-          <h5 className="text-blue flex items-center text-sm font-bold mr-2 ">
+          <h5 className="text-blue dark:text-slate-800 flex items-center text-sm font-bold mr-2 ">
             {res.title}
             <ExternalLinkIcon
-              className="h-4 w-4 text-blue inline-block ml-1 "
+              className="h-4 w-4 text-blue dark:text-slate-800 inline-block ml-1 "
               aria-hidden="true"
             />
           </h5>

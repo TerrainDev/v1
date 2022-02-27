@@ -9,13 +9,13 @@ export default function FAQ() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="theme-base dark:theme-terrain bg-white"
+      className="theme-base dark:theme-terrain bg-white dark:font-serif"
     >
       <div className="  w-full px-4 py-24 max-w-4xl mx-auto">
-        <h1 className="text-blue mb-8 font-medium text-2xl lg:text-4xl pl-2">
+        <h1 className="text-blue  dark:text-black mb-8 font-medium text-2xl lg:text-4xl pl-2">
           FAQ / HELP
         </h1>
-        <div className="w-full  p-2 bg-green  text-blue rounded-2xl">
+        <div className="w-full  p-2 bg-green dark:bg-gray  text-blue  dark:text-black rounded-2xl">
           <Disclosure as="div">
             {({ open }) => (
               <>
@@ -27,7 +27,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -38,7 +38,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black ">
                     <p>
                       We are a for-profit initiative and choose to be so in
                       order to enable the longevity of our work, and remove
@@ -80,7 +80,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -91,7 +91,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     We are still getting on our feet and starting up, and so
                     extra financial support at this time is greatly appreciated
                     and highly felt. If you are a philanthropic organisation,
@@ -119,7 +119,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -130,7 +130,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     The short answer is yes, drop us an email to
                     hello@terrain.earth with a little introduction, your
                     curiosity and a CV. However, the long answer is that we
@@ -151,7 +151,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -162,7 +162,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     37.8136° S 144.9631° E; Wurundjeri Land, Melbourne,
                     Australia, Earth.
                   </Disclosure.Panel>
@@ -178,7 +178,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -189,7 +189,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     Our projects are either directly conceived or collaborative
                     from the get-go - they can be one-off or ongoing. We are
                     open to collaboration on projects and we&apos;d love to hear
@@ -210,7 +210,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -221,7 +221,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     Updates on upcoming happenings by us and our friends, new
                     arrivals to the Bookshelf, and the occasional music playlist
                     with what we&apos;re listening to. We don&apos;t send them
@@ -252,7 +252,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     <p>
                       It comes as no surprise that the Internet borrows language
                       from nature (i.e. mouse, stream, root, tree, bug, cloud,
@@ -330,7 +330,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     All orders are available for local delivery, pick-up or 100%
                     carbon negative Australia wide shipping (via
                     <Link href={"https://try.sendle.com/en-au/impact"}>
@@ -364,7 +364,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -375,7 +375,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     We're unable to offer refunds for change of mind, but you
                     can return a book to us within 14 days for an exchange or
                     store-credit if it's in as-new condition (no scuffs or
@@ -409,7 +409,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     Shipping with
                     <Link href={"https://try.sendle.com/en-au/impact"}>
                       <a rel="noopener noreferrer" target="_blank">
@@ -447,7 +447,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     One Book = One Tree Planted. For every book sold we'll be
                     planting one tree on your behalf. We&apos;ve partnered with
                     <Link
@@ -478,7 +478,7 @@ export default function FAQ() {
                   <GlobeIcon
                     className={`${
                       open ? "transform rotate-180" : ""
-                    } w-6 h-6 text-blue hidden md:block`}
+                    } w-6 h-6 text-blue dark:text-black hidden md:block`}
                   />
                 </Disclosure.Button>
                 <Transition
@@ -489,7 +489,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     Essentially, you can&apos;t buy TERRAIN, you can only engage
                     with it presently; as it is not a thwarted attempt to join
                     the commerce bandwagon, there is no face oil or incense that
@@ -533,7 +533,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     TERRAIN encompasses digital and physical aspects. Both are
                     equally important for how TERRAIN functions - with the
                     different spaces they occupy and the people they interact
@@ -580,7 +580,7 @@ export default function FAQ() {
                   leaveFrom="transform scale-100 opacity-100"
                   leaveTo="transform scale-95 opacity-0"
                 >
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-md text-blue dark:text-black">
                     <p>
                       In the phrase “social justice” we question what exactly we
                       refer to when we say social. There are incredible acts of

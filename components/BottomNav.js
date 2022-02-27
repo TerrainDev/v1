@@ -18,16 +18,16 @@ export default function BottomNav() {
       className="theme-base dark:theme-terrain w-full max-w-full px-16 sm:px-16 flex justify-center fixed bottom-8 z-50 "
     >
       <Tab.Group manual>
-        <Tab.List className="shadow-lg shadow-green/20 flex items-center w-80 bg-white rounded-full border-2 border-blue sm:w-[24rem] sm:bottom-8">
+        <Tab.List className="shadow-lg shadow-green/20 dark:shadow-steel/30 flex items-center w-80 bg-white rounded-full border-2 border-blue dark:border-steel sm:w-[24rem] sm:bottom-8">
           <Link href={"/"} passHref>
             <a className="w-full ">
               <Tab
                 className={() =>
                   classNames(
                     " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-blue hover:text-darkerBlue",
+                    "focus:outline-none text-blue dark:text-slate-800 hover:text-darkerBlue dark:hover:text-black ",
                     router.asPath.endsWith("/")
-                      ? "bg-green text-blue"
+                      ? "bg-green dark:bg-gray text-blue dark:text-black"
                       : "bg-white"
                   )
                 }
@@ -42,9 +42,9 @@ export default function BottomNav() {
                 className={() =>
                   classNames(
                     " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-blue  hover:text-darkerBlue",
+                    "focus:outline-none text-blue dark:text-slate-800 hover:text-darkerBlue dark:hover:text-black ",
                     router.asPath === "/resources"
-                      ? "bg-green text-blue"
+                      ? "bg-green dark:bg-gray text-blue dark:text-black"
                       : "bg-white"
                   )
                 }
@@ -59,9 +59,9 @@ export default function BottomNav() {
                 className={() =>
                   classNames(
                     " w-full py-3 text-sm leading-5 font-medium  rounded-full ",
-                    "focus:outline-none text-blue  hover:text-darkerBlue",
+                    "focus:outline-none text-blue dark:text-slate-800 hover:text-darkerBlue dark:hover:text-black ",
                     router.asPath === "/services"
-                      ? "bg-green text-blue"
+                      ? "bg-green dark:bg-gray text-blue dark:text-black"
                       : "bg-white"
                   )
                 }

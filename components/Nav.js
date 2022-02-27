@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { Menu, Transition } from "@headlessui/react";
-import Toggle from "../components/Toggle";
+// import Toggle from "../components/Toggle";
 import { Fragment } from "react";
 import { DotsVerticalIcon } from "@heroicons/react/solid";
 
@@ -29,22 +29,22 @@ export default function Nav() {
     <nav
       className={
         router.asPath.includes("/resources")
-          ? "theme-base dark:theme-terrain bg-white w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
-          : "theme-base dark:theme-terrain backdrop-blur-sm w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
+          ? "theme-base dark:theme-terrain  dark:font-serif bg-white w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
+          : "theme-base dark:theme-terrain  dark:font-serif backdrop-blur-sm w-full text-right fixed top-0 py-4 px-4 flex justify-between items-center z-50  lg:px-8 "
       }
     >
       <Link href="/">
         <h1
           className={
             router.asPath.match("/contact")
-              ? "text-white cursor-pointer text-xl font-medium hover:text-green "
-              : "text-blue cursor-pointer text-xl font-medium"
+              ? "text-white cursor-pointer text-xl font-medium hover:text-green dark:hover:text-steel "
+              : "text-blue dark:text-black  cursor-pointer text-xl font-medium"
           }
         >
           TERRAIN
         </h1>
       </Link>
-      <div className="hidden lg:flex lg:items-center lg:justify-center font-medium text-xl cursor-pointer text-right text-blue ">
+      <div className="hidden lg:flex lg:items-center lg:justify-center font-medium text-xl cursor-pointer text-right text-blue dark:text-black ">
         {router.asPath.match("/bookshelf") ? (
           <button
             className="font-medium inline-block text-right mr-4  "
@@ -58,7 +58,7 @@ export default function Nav() {
               className={
                 router.asPath.match("/contact")
                   ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
-                  : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                  : "text-blue dark:text-black  cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
               }
             >
               BOOKSHELF
@@ -69,8 +69,8 @@ export default function Nav() {
           <h4
             className={
               router.asPath.match("/contact")
-                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
-                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green dark:hover:text-steel "
+                : "text-blue dark:text-black  cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
             }
           >
             ABOUT
@@ -80,8 +80,8 @@ export default function Nav() {
           <h4
             className={
               router.asPath.match("/contact")
-                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
-                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green dark:hover:text-steel "
+                : "text-blue dark:text-black  cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
             }
           >
             FAQ
@@ -91,14 +91,14 @@ export default function Nav() {
           <h4
             className={
               router.asPath.match("/contact")
-                ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
-                : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                ? "text-white cursor-pointer text-xl font-medium  hover:text-green dark:hover:text-steel "
+                : "text-blue dark:text-black  cursor-pointer text-xl font-medium  hover:text-darkerBlue"
             }
           >
             CONTACT
           </h4>
         </Link>
-        <Toggle />
+        {/* <Toggle /> */}
       </div>
       <Menu as="div" className="relative inline-block text-left lg:hidden">
         <div className="flex items-center ">
@@ -122,8 +122,8 @@ export default function Nav() {
               <h4
                 className={
                   router.asPath.match("/contact")
-                    ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green "
-                    : "text-blue cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
+                    ? "text-white cursor-pointer text-xl font-medium mr-4 hover:text-green dark:hover:text-steel "
+                    : "text-blue dark:text-black cursor-pointer text-xl font-medium mr-4 hover:text-darkerBlue"
                 }
               >
                 BOOKSHELF
@@ -135,7 +135,7 @@ export default function Nav() {
             className={
               router.asPath.match("/contact")
                 ? "inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-green bg-gray rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-darkerBlue focus-visible:ring-opacity-75 "
-                : "inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-blue bg-gray rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-darkerBlue focus-visible:ring-opacity-75"
+                : "inline-flex justify-center w-full px-2 py-2 text-sm font-medium text-blue dark:text-black bg-gray rounded-full bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-darkerBlue focus-visible:ring-opacity-75"
             }
           >
             <DotsVerticalIcon className="h-5 w-5" aria-hidden="true" />
@@ -150,13 +150,13 @@ export default function Nav() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 z-50 w-32 mt-2 origin-top-right bg-white  rounded-lg shadow-md ring-1 ring-green ring-opacity-70 focus:outline-none">
+          <Menu.Items className="absolute right-0 z-50 w-32 mt-2 origin-top-right bg-white  rounded-lg shadow-md ring-1 ring-green dark:ring-slate-800 ring-opacity-70 focus:outline-none">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {() => (
                   <Link href="/about" passHref>
                     <a>
-                      <button className=" text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
+                      <button className=" text-blue dark:text-black hover:text-blue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         ABOUT
                       </button>
                     </a>
@@ -167,7 +167,7 @@ export default function Nav() {
                 {() => (
                   <Link href="/faq" passHref>
                     <a>
-                      <button className="  text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
+                      <button className="  text-blue dark:text-black hover:text-blue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         F.A.Q
                       </button>
                     </a>
@@ -178,14 +178,14 @@ export default function Nav() {
                 {() => (
                   <Link href="/contact" passHref>
                     <a>
-                      <button className="  text-blue hover:text-skin-darkerBlue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
+                      <button className="  text-blue dark:text-black hover:text-blue text-right rounded-md w-full px-2 py-2 text-md  font-medium hover:bg-gray">
                         CONTACT
                       </button>
                     </a>
                   </Link>
                 )}
               </Menu.Item>
-              <Menu.Item>
+              {/* <Menu.Item>
                 {() => (
                   <button
                     onClick={() =>
@@ -196,7 +196,7 @@ export default function Nav() {
                     {theme === "light" ? "THEME: Water" : "THEME: Earth"}
                   </button>
                 )}
-              </Menu.Item>
+              </Menu.Item> */}
             </div>
           </Menu.Items>
         </Transition>

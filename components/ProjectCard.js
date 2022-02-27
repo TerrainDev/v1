@@ -27,37 +27,41 @@ export default function ProjectCard({ project }) {
     },
   };
   return (
-    <div className="theme-base dark:theme-terrain group relative bg-skin-lighter-fill border border-green rounded-lg flex flex-col overflow-hidden">
-      <div className="aspect-w-4 aspect-h-3 h-48  group-hover:opacity-75  ">
+    <div className="theme-base dark:theme-terrain group relative bg-skin-lighter-fill dark:bg-amber-50 border border-green dark:border-black rounded-lg flex flex-col overflow-hidden">
+      <div className="aspect-w-4 aspect-h-3 h-48  group-hover:opacity-75  dark:contrast-75 ">
         <Link href={`/projects/${slug}`} passHref>
           <a>
             <Image
               src={thumbnail.url}
               alt={thumbnail.title}
               layout="fill"
-              className=" cursor-pointer object-center object-cover"
+              className=" cursor-pointer object-center object-cover "
             />
           </a>
         </Link>
       </div>
       <div className="flex flex-col flex-1 p-4 space-y-2 ">
         <div className="flex items-center">
-          <p className="text-xs text-skin-titles font-bold mr-2">
+          <p className="text-xs text-blue dark:text-black font-bold mr-2">
             {format(new Date(date), "do MMM yyyy")}
           </p>
           {Date.parse(date) > new Date() && (
-            <h4 className=" text-green font-bold text-[10px] py-1 px-2 bg-blue border-2 border-green rounded-full ">
+            <h4 className=" text-green dark:text-slate-800 font-bold text-[10px] py-1 px-2 bg-blue dark:bg-white border-2 border-green dark:border-steel rounded-full ">
               UPCOMING
             </h4>
           )}
         </div>
 
-        <h3 className="text-sm font-bold text-skin-titles">{title}</h3>
-        <div className="text-sm text-steel font-medium ">
+        <h3 className="text-sm font-bold text-blue dark:text-slate-800">
+          {title}
+        </h3>
+        <div className="text-sm text-slate-800 font-medium ">
           {documentToReactComponents(shortDescription.json, renderOptions)}
         </div>
         <div className="flex-1 flex flex-col justify-end">
-          <p className="text-xs font-medium text-skin-titles">#{slug}</p>
+          <p className="text-xs font-medium text-blue dark:text-slate-800">
+            #{slug}
+          </p>
         </div>
       </div>
     </div>
