@@ -1,6 +1,6 @@
 import Image from "next/image";
 import useSWR from "swr";
-import { format, isToday, isTomorrow } from "date-fns";
+import { isToday, isTomorrow } from "date-fns";
 
 const apiKey = process.env.WEATHER_API_KEY;
 
@@ -18,7 +18,7 @@ const dayFormatter = (date) => {
 
 export default function WeatherWidget() {
   const { data, error } = useSWR(endpoint, fetcher);
-  //   console.log("forecast", data?.forecast);
+  // console.log("forecast", data?.forecast);
 
   if (error)
     return (
@@ -33,7 +33,7 @@ export default function WeatherWidget() {
         <div className="flex items-center" key={i}>
           <span>{dayFormatter(day.date)}</span>
           <Image
-            src={`http://${day.day.condition.icon}`}
+            src={`https://${day.day.condition.icon}`}
             alt={day.day.condition.text}
             width={30}
             height={30}
