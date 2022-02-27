@@ -4,7 +4,7 @@ import { isToday, isTomorrow } from "date-fns";
 
 const apiKey = process.env.WEATHER_API_KEY;
 
-const endpoint = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Melbourne&days=3&aqi=no&alerts=no`;
+const endpoint = `https://api.weatherapi.com/v1/forecast.json?key=5e1f0e7d4d1a46b29f4173037222602&q=Melbourne&days=3&aqi=no&alerts=no`;
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const dayFormatter = (date) => {
