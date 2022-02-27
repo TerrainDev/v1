@@ -10,22 +10,12 @@ export default function MobileResourcesListBox({
   tagCount,
 }) {
   return (
-    <div className="flex w-full md:w-96 justify-start items-center">
-      <h1 className=" mr-2 text-blue text-xl ">Resources</h1>
-      <div className="w-full px-4 py-4 z-30 top-12">
+    <div className="flex w-full  justify-start items-center">
+      <div className="w-full z-30 top-12">
         <Listbox value={selectedTag} onChange={setSelectedTag}>
           <div className="relative mt-1">
-            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-blue border-2 border-green bg-white rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:border-green sm:text-lg">
+            <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left text-blue text-sm border-2 border-green bg-white rounded-xl cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-green focus-visible:ring-offset-2 focus-visible:border-green ">
               <div className="flex items-center">
-                {/* <div
-                  className={`h-2.5 w-2.5 rounded-full  mr-2 `}
-                  style={{
-                    backgroundColor: selectedTag.color
-                      ? `${selectedTag.color}`
-                      : "transparent",
-                  }}
-                ></div> */}
-
                 <span className="block truncate">{selectedTag.name}</span>
               </div>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">

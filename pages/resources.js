@@ -2,28 +2,33 @@ import { useState } from "react";
 import { getResources } from "../lib/contentfulHelper";
 import ResourceList from "../components/ResourceList";
 import MobileResourcesListBox from "../components/MobileResourcesListBox";
+import SearchBar from "../components/SearchBar";
+import { SearchIcon } from "@heroicons/react/outline";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 const navigation = [
   { name: "All", id: "all" },
-  { name: "Academic", id: "academic", color: "#27CF93" },
+  { name: "Academic", id: "academic" },
   {
     name: "Publications",
     id: "publications",
     color: "#2756CF",
   },
-  { name: "Organisations", id: "organisations", color: "#8527CF" },
-  { name: "Podcasts", id: "podcasts", color: "#CF2763" },
-  { name: "Films", id: "films", color: "#CF8C27" },
-  { name: "Artists", id: "artists", color: "#53CF27" },
-  { name: "News Articles", id: "newsArticle", color: "#CCCF27" },
+  { name: "Organisations", id: "organisations" },
+  { name: "Podcasts", id: "podcasts" },
+  { name: "Films", id: "films" },
+  { name: "Artists", id: "artists" },
+  { name: "News Articles", id: "newsArticle" },
 ];
 
 export default function ResourcesPage({ resources }) {
   const [showResources, setShowResources] = useState(resources);
   const [selectedTag, setSelectedTag] = useState(navigation[0]);
+  const [query, setQuery] = useState("");
+
+  //filter by tag
 
   const filterByTag = (tag) => {
     const filteredResources = resources.filter((r) =>
@@ -53,25 +58,55 @@ export default function ResourcesPage({ resources }) {
     return count.filter((x) => x === tag).length;
   };
 
+  //SearchBox filtering
+  const filteredResources = query
+    ? showResources.filter((r) => {
+        return (
+          r.title.toLowerCase().includes(query.toLowerCase()) ||
+          r.tagline.json.content[0].content[0].value
+            .toLowerCase()
+            .includes(query.toLowerCase())
+        );
+      })
+    : [];
+
   return (
-    <div className="theme-base dark:theme-terrain bg-white lg:bg-gray">
+    <div className="theme-base dark:theme-terrain bg-white dark:font-serif lg:bg-gray">
       <div className="min-w-screen flex flex-col min-h-screen overflow-y-hidden">
         <div className=" pt-16  min-h-screen ">
           <aside
-            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 pt-20 space-y-1 bg-white"
+            className="hidden px-4 lg:flex flex-col w-72 lg:fixed lg:inset-y-0 z-0 pt-20 space-y-1 bg-white"
             aria-label="Sidebar"
           >
-            <h1 className="px-4 lg:mb-10 text-blue text-2xl font-semibold ">
+            <h1 className="px-4 text-blue dark:text-slate-800 text-2xl font-semibold dark:font-normal ">
               Resources
             </h1>
+            <div className="mt-1 relative rounded-md">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <SearchIcon className="h-4 w-4 text-blue dark:text-slate-800" />
+              </div>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                }}
+                placeholder="Search..."
+                className="pl-10 py-2 text-sm text-blue dark:text-slate-800 w-full my-4 bg-white rounded-full placeholder:text-steel focus:outline-green dark:focus:outline-slate-800 border-green dark:border-black "
+              />
+              <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                <span className="text-blue dark:text-slate-800 text-[10px] p-1 ">
+                  ⌘ K
+                </span>
+              </div>
+            </div>
 
             {navigation.map((item, i) => (
               <div
                 key={item.name}
                 className={classNames(
                   selectedTag.id === item.id
-                    ? "bg-steel hover:text-white text-green"
-                    : "bg-white hover:bg-gray text-blue hover:text-green ",
+                    ? "bg-steel hover:text-white text-green dark:text-white"
+                    : "bg-white hover:bg-gray text-blue dark:text-slate-800 hover:text-green dark:hover:text-black  ",
                   " hover:text-darkerBlue group lg:flex items-center px-4 py-2 text-sm font-medium rounded-lg cursor-pointer"
                 )}
                 onClick={() => {
@@ -83,9 +118,9 @@ export default function ResourcesPage({ resources }) {
                   <button
                     className={classNames(
                       selectedTag.id === item.id
-                        ? "bg-white ring-2 ring-green text-blue font-bold"
-                        : "bg-blue group-hover:bg-darkerBlue text-green",
-                      "ml-3 inline-block py-0.5 px-3 text-xs font-medium rounded-full "
+                        ? "bg-white ring-2 ring-green dark:ring-white text-blue dark:text-black font-bold"
+                        : "bg-blue dark:bg-steel group-hover:bg-darkerBlue dark:group-hover:bg-slate-800 text-green dark:text-white",
+                      "ml-3 dark:font-mono inline-block py-0.5 px-3 text-xs font-medium rounded-full "
                     )}
                   >
                     {tagCount(item.id.toString())}
@@ -94,7 +129,7 @@ export default function ResourcesPage({ resources }) {
               </div>
             ))}
           </aside>
-          <div className="px-4 w-full lg:hidden">
+          <div className="flex flex-col sm:flex-row sm:space-x-4 px-4 w-full lg:hidden">
             <MobileResourcesListBox
               navigation={navigation}
               filterByTag={filterByTag}
@@ -102,12 +137,40 @@ export default function ResourcesPage({ resources }) {
               setSelectedTag={setSelectedTag}
               tagCount={tagCount}
             />
+
+            <div className="mt-1 w-full relative rounded-md lg:hidden">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <SearchIcon className="h-4 w-4 text-blue" />
+              </div>
+              <input
+                type="text"
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                }}
+                placeholder="Search..."
+                className="pl-10 py-2 w-full text-sm text-blue my-2 bg-white rounded-xl placeholder:text-steel focus:outline-green border-2 border-green "
+              />
+              <div className="absolute inset-y-0 right-0 pr-3 hidden items-center pointer-events-none md:flex">
+                <span className="text-blue text-[10px] p-1 ">⌘ K</span>
+              </div>
+            </div>
           </div>
-          <div className=" flex flex-col px-4 lg:pl-80 lg:pr-8 lg:px-10 pb-24 pt-10 space-y-4 overflow-y-auto ">
-            {showResources.map((res) => (
-              <ResourceList key={res.sys.id} res={res} />
-            ))}
-          </div>
+
+          <SearchBar res={resources} />
+          {!query.length && (
+            <div className=" flex flex-col px-4 lg:pl-80 lg:pr-8 lg:px-10 pb-24 pt-10 space-y-4 overflow-y-auto ">
+              {showResources.map((res) => (
+                <ResourceList key={res.sys.id} res={res} />
+              ))}
+            </div>
+          )}
+          {query.length && (
+            <div className=" flex flex-col px-4 lg:pl-80 lg:pr-8 lg:px-10 pb-24 pt-10 space-y-4 overflow-y-auto ">
+              {filteredResources.map((res) => (
+                <ResourceList key={res.sys.id} res={res} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -120,6 +183,6 @@ export async function getStaticProps() {
     props: {
       resources: data.resourcesCollection.items,
     },
-    revalidate: 60,
+    revalidate: 3060,
   };
 }

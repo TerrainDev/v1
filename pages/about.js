@@ -26,14 +26,14 @@ export default function About() {
   };
 
   return (
-    <div className="theme-base dark:theme-terrain min-h-screen bg-green relative">
+    <div className="theme-base dark:theme-terrain min-h-screen bg-green dark:bg-white dark:font-serif relative pt-24">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-20 pb-32 mx-auto w-full flex flex-col max-w-4xl px-4 text-blue text-xl tracking-tight "
+        className="relative z-20 pb-32  w-full flex flex-col  px-4 md:px-8 text-blue dark:text-black text-xl tracking-tight "
       >
-        <motion.h1 className="pt-32 text-2xl font-semibold tracking-tighter">
+        <motion.h1 className=" text-2xl font-semibold tracking-tighter">
           TERRAIN is an initiative and platform designed to remind humans that
           they are embedded in a more-than-human world.
         </motion.h1>
@@ -74,12 +74,15 @@ export default function About() {
           its truly borderless terrain as one ecosystem. Our terrain will always
           be the fabric of society
         </motion.p>
-        <motion.p className="my-4 ">Meet TERRAIN.</motion.p>
-        <motion.p className="my-4 ">
+        <motion.p className="my-4" variants={item}>
+          Meet TERRAIN.
+        </motion.p>
+        <motion.p className="my-4" variants={item}>
           [Click{" "}
           <motion.span
-            className="text-darkerBlue underline cursor-pointer hover:text-blue"
+            className="text-darkerBlue dark:text-slate-800 underline cursor-pointer hover:text-blue dark:hover:text-gray"
             onClick={() => setShowMore(!showMore)}
+            variants={item}
           >
             here
           </motion.span>{" "}
@@ -88,7 +91,7 @@ export default function About() {
         </motion.p>
         {showMore && (
           <>
-            <motion.p className="my-4">
+            <motion.p className="my-4" variants={item}>
               TERRAIN Projects reinforce the powerful transformative effect
               interdisciplinary arts can have on humans within civic life. Each
               TERRAIN Project incubates social spaces to engage with
@@ -98,7 +101,7 @@ export default function About() {
               human (Homo Sapien) and more-than-human (human, atom, plant,
               machine, animal) separation.
             </motion.p>
-            <motion.p className="my-4">
+            <motion.p className="my-4" variants={item}>
               Humanity&apos;s new-TERRAIN will radically evolve humans from
               living individualistically in isolated silos into a coherent whole
               built both on and out of Earth. Shifting from self-care to
