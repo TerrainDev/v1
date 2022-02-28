@@ -20,7 +20,6 @@ export default function ProductPage({ product }) {
 
   const allProducts = product.collections.edges[0].node.products.edges;
   const currentProduct = product.id;
-  console.log(allProducts);
 
   const selectedVariant = {
     id: product.variants.edges[0].node.id,
