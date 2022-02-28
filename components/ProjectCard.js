@@ -35,7 +35,7 @@ export default function ProjectCard({ project }) {
               src={thumbnail.url}
               alt={thumbnail.title}
               layout="fill"
-              className=" cursor-pointer object-center object-cover "
+              className="cursor-pointer object-center object-cover "
             />
           </a>
         </Link>
